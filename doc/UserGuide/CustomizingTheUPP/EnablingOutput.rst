@@ -23,7 +23,7 @@ UPP can output temperature, U, and V components on sigma surfaces. These corresp
    - Validate the control XML file against the `EMC_POST_CTRL_Schema.xsd` schema.
 
 4. **Flat Text File Generation**:
-   - Convert the control XML to a flat text file, ensuring that it is validated as part of the process. More information can be found in the :ref:`_create_txt_file` documentation.
+   - Convert the control XML to a flat text file, ensuring that it is validated as part of the process. More information can be found in the :ref:`create_txt_file` documentation.
 
 **Sigma Levels**
 
