@@ -1,16 +1,17 @@
 .. _enabling-Output:
 
+********************************
 User-Defined Sigma Level Output
-===================================
+********************************
 
 This documentation describes the steps to generate model output at user-defined sigma levels using the Unified Post Processor (UPP). The instructions address the configuration of XML files and the resolution of potential issues encountered during this process.
 
 Generating Sigma Level Output
 -----------------------------
 
-UPP can output temperature, U, and V components on sigma surfaces. These correspond to indices 206, 208, and 209 in the GRIB2 table. Follow these steps to configure your workflow for this output:
+UPP can output temperature, U, and V components on sigma surfaces. These correspond to indices 206, 208, and 209 in the :term:`GRIB2`` table. Follow these steps to configure your workflow for this output:
 
-### Configuring XML Files
+**Configuring XML Files**
 
 1. **Locate XML Configuration Files**:
    - Use the XML files in the `UPP/parm` directory as references. Specifically, the `post_avblflds.xml` file contains all the fields that UPP can output.
@@ -24,7 +25,7 @@ UPP can output temperature, U, and V components on sigma surfaces. These corresp
 4. **Flat Text File Generation**:
    - Convert the control XML to a flat text file, ensuring that it is validated as part of the process.
 
-### Sigma Levels
+**Sigma Levels**
 
 By default, only certain sigma levels are outputted. These levels are in the source file `SET_LVLSXML.f` and can be found between lines 342 and 363. Users must:
 
@@ -55,6 +56,6 @@ Important Notes
 
 - Fortran I/O errors may occur if the sigma levels in the control file are not synchronized with the source code configuration.
 
-- Comprehensive documentation on control files can be found in the :ref:`control-file` UPP control file documentation, which provides details about XML file formatting and flat file generation.
+- Comprehensive documentation on control files can be found in the :ref:`control-file` documentation, which provides details about XML file formatting and flat file generation.
 
 By following these steps, users can successfully configure UPP to generate model output on user-defined sigma levels while avoiding common pitfalls.
