@@ -1,4 +1,4 @@
-.. _enabling-Output:
+.. _enabling-output:
 
 ********************************
 User-Defined Sigma Level Output
