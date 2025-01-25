@@ -1,3 +1,6 @@
+.. role:: bolditalic
+    :class: bolditalic
+
 .. _enabling-output:
 
 ********************************
@@ -11,7 +14,8 @@ Generating Sigma Level Output
 
 UPP can output temperature, U, and V components on sigma surfaces. These correspond to indices 206, 208, and 209 in the :doc:`GRIB2 <UPP_GRIB2_Table_byID>` table. Follow these steps to configure your workflow for this output:
 
-**Configuring XML Files**
+Configuring XML Files
+^^^^^^^^^^^^^^^^^^^^^^
 
 An XML :ref:`control file <control-file>` determines what fields and levels UPP will output. 
 
@@ -23,17 +27,12 @@ An XML :ref:`control file <control-file>` determines what fields and levels UPP 
 
 #. **Flat Text File Generation**: Convert the control XML to a flat text file based on the information in the :ref:`create_txt_file` documentation.
 
-**Sigma Levels**
+Source Code Modifications
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-By default, only certain sigma levels are outputted. These levels are defined in `SET_LVLSXML.f <https://github.com/NOAA-EMC/UPP/blob/develop/sorc/ncep_post.fd/SET_LVLSXML.f>`_ using the ``ASIGO1`` array. Users must review these levels in the ``SET_LVLSXML.f`` file to confirm compatibility with their requirements.
+By default, only certain sigma levels are outputted. These levels are defined in `SET_LVLSXML.f <https://github.com/NOAA-EMC/UPP/blob/develop/sorc/ncep_post.fd/SET_LVLSXML.f>`_ using the ``ASIGO1`` array. Users must review these levels in the ``SET_LVLSXML.f`` file to confirm compatibility with their requirements. If the default sigma levels are insufficient, users must:
 
-
-Required Source Code Modifications
-----------------------------------
-
-If the default sigma levels are insufficient, users must:
-
-#. **Modify** ``SET_LVLSXML.f``: Change the entries for ``ASIGO1`` to include your desired sigma levels.
+#. **Modify** :bolditalic:`SET_LVLSXML.f`: Change the entries for ``ASIGO1`` to include your desired sigma levels.
 
 #. **Recompile UPP**: Recompile the UPP source code after making the changes.
 
