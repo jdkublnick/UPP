@@ -33,16 +33,13 @@ By default, only certain sigma levels are outputted. These levels are defined in
 Required Source Code Modifications
 ----------------------------------
 
-If the default sigma levels are insufficient, you must:
+If the default sigma levels are insufficient, users must:
 
-1. **Modify `SET_LVLSXML.f`**:
-   - Change the entries for `ASIGO1` to include your desired sigma levels.
+#. **Modify** ``SET_LVLSXML.f``: Change the entries for ``ASIGO1`` to include your desired sigma levels.
 
-2. **Recompile UPP**:
-   - Recompile the UPP source code after making the changes.
+#. **Recompile UPP**: Recompile the UPP source code after making the changes.
 
-3. **Update XML Tags**:
-   - Ensure that the XML tags explicitly reference the modified sigma levels.
+#. **Update XML Tags**: Ensure that the XML control file explicitly references the modified sigma levels in the ``<level></level>`` tag.
 
 Important Notes
 ---------------
