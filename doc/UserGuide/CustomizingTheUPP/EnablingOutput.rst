@@ -27,7 +27,7 @@ UPP can output temperature, U, and V components on sigma surfaces. These corresp
 
 **Sigma Levels**
 
-By default, only certain sigma levels are outputted. These levels are in the source file `SET_LVLSXML.f` and can be found between lines 342 and 363. Users must:
+By default, only certain sigma levels are outputted. These levels are defined in `SET_LVLSXML.f <https://github.com/NOAA-EMC/UPP/blob/develop/sorc/ncep_post.fd/SET_LVLSXML.f>`_ using the ``ASIGO1`` array. Users must review these levels in the ``SET_LVLSXML.f`` file to confirm compatibility with their requirements.
 
 - **Verify Default Levels**:
   Review these levels in the `SET_LVLSXML.f` source file to confirm their compatibility with your requirements.
