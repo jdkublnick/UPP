@@ -9,7 +9,7 @@ This documentation describes the steps to generate model output at user-defined 
 Generating Sigma Level Output
 -----------------------------
 
-UPP can output temperature, U, and V components on sigma surfaces. These correspond to indices 206, 208, and 209 in the :term:`GRIB2`` table. Follow these steps to configure your workflow for this output:
+UPP can output temperature, U, and V components on sigma surfaces. These correspond to indices 206, 208, and 209 in the :doc:`GRIB2 <UPP_GRIB2_Table_byID>` table. Follow these steps to configure your workflow for this output:
 
 **Configuring XML Files**
 
