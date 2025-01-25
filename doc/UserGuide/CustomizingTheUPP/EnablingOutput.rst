@@ -39,13 +39,10 @@ If the default sigma levels are insufficient, users must:
 
 #. **Update XML Tags**: Ensure that the XML control file explicitly references the modified sigma levels in the ``<level></level>`` tag.
 
-Important Notes
----------------
+.. hint::
 
-- Adding `<level></level>` tags manually allows UPP to compile and run successfully, but it will not produce any output unless the levels are also modified in `SET_LVLSXML.f` and properly referenced.
+   - Adding ``<level></level>`` tags manually allows UPP to compile and run successfully, but it will not produce any output unless the levels are also modified in ``SET_LVLSXML.f`` and properly referenced.
 
-- Fortran I/O errors may occur if the sigma levels in the control file are not synchronized with the source code configuration.
+   - Fortran I/O errors may occur if the sigma levels in the control file are not synchronized with the source code configuration.
 
-- Comprehensive documentation on control files can be found in the :ref:`control-file` documentation, which provides details about XML file formatting and flat file generation.
-
-By following these steps, users can successfully configure UPP to generate model output on user-defined sigma levels while avoiding common pitfalls.
+   - Comprehensive documentation on control files can be found in the :ref:`control-file` documentation, which provides details about XML file formatting and flat file generation.
