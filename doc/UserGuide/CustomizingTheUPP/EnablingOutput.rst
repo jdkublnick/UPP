@@ -13,17 +13,15 @@ UPP can output temperature, U, and V components on sigma surfaces. These corresp
 
 **Configuring XML Files**
 
-1. **Locate XML Configuration Files**:
-   - Use the XML files in the `UPP/parm` directory as references. Specifically, the `post_avblflds.xml` file contains all the fields that UPP can output.
+An XML :ref:`control file <control-file>` determines what fields and levels UPP will output. 
 
-2. **Modify Control XML**:
-   - Copy the entries for temperature, U, and V (indices 206, 208, and 209) from `post_avblflds.xml` to the control XML file used in your workflow.
+#. **Locate the XML Control File**: Control files for various operational models are located in the ``UPP/parm`` directory. The ``post_avblflds.xml`` file contains all fields that the UPP can output. 
 
-3. **Validation**:
-   - Validate the control XML file against the `EMC_POST_CTRL_Schema.xsd` schema.
+#. **Modify the Control XML**: Copy the entries for temperature, U, and V (indices 206, 208, and 209) from ``post_avblflds.xml`` to the control XML file used in your workflow. Be sure to include a ``<level></level>`` tag with the appropriate levels in the XML control file to define which sigma levels to output.
 
-4. **Flat Text File Generation**:
-   - Convert the control XML to a flat text file, ensuring that it is validated as part of the process. More information can be found in the :ref:`create_txt_file` documentation.
+#. **Validate the Control File**: Validate the control XML file against the ``EMC_POST_CTRL_Schema.xsd`` schema according to :ref:`these instructions <create_txt_file>`.
+
+#. **Flat Text File Generation**: Convert the control XML to a flat text file based on the information in the :ref:`create_txt_file` documentation.
 
 **Sigma Levels**
 
